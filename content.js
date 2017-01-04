@@ -122,6 +122,9 @@ function getC($0) {
                     continue;
                 };
 
+                // this fails on CSSMediaRules and so we don't get any
+                // css media queries that are active
+                // Make a fix for this
                 if(!rules[i].selectorText) continue;
 
                 arrSel=rules[i].selectorText.split(', ');
